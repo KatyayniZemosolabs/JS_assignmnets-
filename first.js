@@ -1,17 +1,17 @@
-//Write a program to demonstrate how a function can be passed as a parameter to another function.
+//Question: Write a program to demonstrate how a function can be passed as a parameter to another function.
 
 //inner function
-function multiply(p,t,r)
+function print()
 {
-    var res= p*t*r;
-    return res;
+    console.log("Simple Interest is : ");
 }
 
 // outer function
-function SimpleInterest(multiply)
+function SimpleInterest(p, t, r, print)
 {
-    var SI=multiply;
+    var SI=p* t* r;
     SI= SI/100;
+    print();
     console.log(SI);
 }
 
@@ -19,4 +19,4 @@ const p=20;
 const t=10;
 const r= 10;
 
-SimpleInterest(multiply(p, t, r));
+SimpleInterest(p, t, r, print);
